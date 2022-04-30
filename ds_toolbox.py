@@ -958,7 +958,7 @@ def plot_calibration_curves(y_true, y_prob, labels=None):
   
     return fig, ax
 
-############### Data processing ###########################
+#! #################### Data processing  start ###########################
 
 ## outliers
 # def dp_outliers(X,skew_threshold = 3,fit_test = False, X_test = None):
@@ -1031,3 +1031,17 @@ def dp_mv_imputation(X_train, fit_test = False, X_test = None):
         return X_train, X_test
     
     return X_train,
+
+def dp_mv_DropCols(data,alpha:float):
+    '''
+    data: pd.Dataframe
+    alpha: missing level for dropping a columns 
+    '''
+    # drop columns with high proportion of missing values
+    ms_col = data.isna().sum()[data.isna().sum()>data.shape[0]*alpha].index
+    data = data.drop(ms_col,axis=1)
+    
+    return data
+
+
+#! #################### Data processing end ###########################
