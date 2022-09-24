@@ -3,4 +3,10 @@ class RunCrossVal():
         print("RunCrossVal.__init__()")
         pass
     
-    def 
+    def result(self):
+        print("RunCrossVal.result()")
+        pass
+    
+if __name__ == "__main__":
+    runcv = RunCrossVal(10)
+    
