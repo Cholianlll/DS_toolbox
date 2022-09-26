@@ -1,0 +1,111 @@
+class ClassifierAlgorithm(object):
+    def __init__(self,dataset = None):
+        '''Initialize the ClassifierAlgorithm'''
+        self.dataset = dataset
+        print('Initialize the ClassifierAlgorithm')
+        pass
+    def train(self,trainingSet = None):
+        '''Train the ClassifierAlgorithm'''
+        print('Train the ClassifierAlgorithm')
+        pass
+    def test(self,testingSet = None):
+        '''Test the ClassifierAlgorithm'''
+        print('Test the ClassifierAlgorithm')
+        pass
+
+
+class SimplekNNClassifier(ClassifierAlgorithm):
+    def __init__(self,):
+        super().__init__()
+        print("SimplekNNClassifier.__init__()")
+    
+    def train(self,trainingSet = None):
+        print("SimplekNNClassifier.train()")
+        pass
+    
+    def test(self,trainingSet = None):
+        print("SimplekNNClassifier.test()")
+        pass
+    
+    
+    
+class DataSet(object):
+    def __init__(self, filename = None):
+        '''Initialize the DataSet'''
+        print('Initialize the DataSet')
+        pass
+    def __readFromCSV(self, filename = None):
+        '''__readFromCSV function'''
+        print('__readFromCSV function')
+        pass
+    
+    def __load(self, filename = None):
+        '''__load function'''
+        print('__load function')
+        pass
+    
+    def clean(self):
+        '''Clean the DataSet'''
+        print('Clean the DataSet')
+        pass
+    
+    def explore(self):
+        '''Explore the DataSet'''
+        print('Explore the DataSet')
+        pass
+    
+
+
+class QualDataSet(DataSet):
+    def __init__(self,filename=None):
+        '''Initialize the QualDataSet'''
+        print('Initialize the QualDataSet')
+        super().__init__(filename)
+        pass
+    
+
+class QuantDataSet(DataSet):
+    def __init__(self,filename=None):
+        '''Create a QualDataSet'''
+        print('Creating a QualDataSet')
+        super().__init__(filename)
+        pass
+    
+class TextDataSet(DataSet):
+    def __init__(self,filename=None):
+        '''Create a TextDataSet'''
+        print('Creating a TextDataSet')
+        super().__init__(filename)
+        pass
+    
+    
+
+class TimeSeriesDataSet(DataSet):
+    def __init__(self,filename=None):
+        '''Initialize the TimeSeriesDataSet'''
+        print('Initialize the TimeSeriesDataSet')
+        super().__init__(filename)
+        pass
+    
+class Experiment(object):
+    def __init__(self,):
+        '''Experiment.__init__()'''
+        print("Experiment.__init__()")
+        pass
+    
+    def runCrossVal(self, k: int):
+        '''Run the experiment with cross validation'''
+        print("Experiment.RunCrossVal()")
+        pass
+    
+    def score(self):
+        '''Score the experiment'''
+        print("Experiment.score()")
+        pass
+    
+if __name__ == '__main__':
+    data = DataSet()
+    data._DataSet__load()
+    data._DataSet__readFromCSV()
+    data.clean()
+    data.explore()
