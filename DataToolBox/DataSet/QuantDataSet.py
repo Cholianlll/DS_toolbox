@@ -1,6 +1,6 @@
 import DataSet
 
-class QualDataSet(DataSet.DataSet):
+class QuantDataSet(DataSet.DataSet):
     def __init__(self,filename=None):
         '''Create a QualDataSet'''
         print('Creating a QualDataSet')

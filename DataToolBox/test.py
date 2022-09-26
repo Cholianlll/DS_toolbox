@@ -1,3 +1,4 @@
-import Experiment.RunCrossVal
+import Experiment
+import DataSet
 
-print(dir(Experiment.RunCrossVal.RunCrossVal))
+print(dir(DataSet))
