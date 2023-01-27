@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 from statsmodels.tsa.stattools import adfuller
+from typing import Dict, List, Union, Optional, Any
 
 #! ############################ Data EDA #############################################
 
@@ -120,7 +121,7 @@ def plot_curve(timeseries, roll = 12):
     plt.show()  
 
 # plot multiple timeseries
-def plot_multiTS(data, cols_idx, date_col):
+def plot_multiTS(data: pd.DataFrame, cols_idx: List, date_col: str):
     
     sns.set_theme(style="darkgrid")
 
